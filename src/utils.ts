@@ -80,6 +80,7 @@ export async function generatePDF({
       } else {
         contentHTML += html;
         console.log(html);
+        console.log('wait');
         console.log(chalk.green('Success'));
       }
 
