@@ -52,6 +52,7 @@ export async function generatePDF({
         waitUntil: 'networkidle0',
         timeout: 0,
       });
+      await page.waitFor(16000);
       // Get the HTML string of the content section.
       const html = await page.evaluate(
         ({ contentSelector }) => {
