@@ -66,6 +66,7 @@ export async function generatePDF({
               element.open = true;
             });
 
+            console.log(chalk.green(element.outerHTML));
             return element.outerHTML;
           } else {
             return '';
