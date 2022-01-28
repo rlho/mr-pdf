@@ -47,12 +47,9 @@ export async function generatePDF({
       console.log(chalk.cyan(`Retrieving html from ${nextPageURL}`));
       console.log();
 
+      await page.goto(`${nextPageURL}`);
+      await page.waitFor(10000);
       // Go to the page specified by nextPageURL
-      await page.goto(`${nextPageURL}`, {
-        waitUntil: 'networkidle0',
-        timeout: 0,
-      });
-      await page.waitFor(16000);
       // Get the HTML string of the content section.
       const html = await page.evaluate(
         ({ contentSelector }) => {
