@@ -44,7 +44,7 @@ export async function generatePDF({
     // Create a list of HTML for the content section of all pages by looping
     while (nextPageURL) {
       console.log();
-      console.log(chalk.cyan(`Retrieving html from ${nextPageURL}`));
+      console.log(chalk.cyan(`Retrieving html ${nextPageURL}`));
       console.log();
 
       await page.goto(`${nextPageURL}`);
