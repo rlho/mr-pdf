@@ -79,7 +79,7 @@ export async function generatePDF({
         console.log(chalk.green('This URL is excluded.'));
       } else {
         contentHTML += html;
-        console.log(html);
+        console.log(chalk.green('html'));
         console.log('wait');
         console.log(chalk.green('Success'));
       }
